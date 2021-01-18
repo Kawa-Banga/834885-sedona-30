@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Дмитрий Шевченко](https://up.htmlacademy.ru/htmlcss/30/user/834885).
-* Наставник: `Неизвестно`.
+* Наставник: `Андрей Минаев`(https://htmlacademy.ru/profile/mtvkand).
 
 ---
 
