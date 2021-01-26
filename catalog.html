@@ -10,23 +10,27 @@
   			<ul>
   				<li><a href="#">Информация</a></li>
   				<li><a href="#">Фото и Видео</a></li>
+  				<li><a href="index.html">
+  					<img src="https://via.placeholder.com/138x70" alt="Логотип Седона" width="138" height="70"> 
+  					</a>
+  				</li>
   				<li><a href="#">Карта штата</a></li>
   				<li><a href="">Гостиницы</a></li>
   			</ul>
   			<a href="index.html">
-  				<img src="https://via.placeholder.com/138x70" alt="Логотип Седона" width="138" height="70"> <!-- Не уверен, верно ли размечать логотип таким образом. Но, думаю, разделять nav на 2 нельзя и лого потом можно будет расположить стилями -->
+  				<img src="https://via.placeholder.com/138x70" alt="Логотип Седона" width="138" height="70"> 
   			</a>
   		</nav>
   	</header>
   	<main>
-      <h1>Каталог гостиниц</h1>
+      <h1 class="visually-hidden">Каталог гостиниц</h1>
       <section>
-        <h2>Фильтр предложений</h2>
+        <h2 class="visually-hidden">Фильтр предложений</h2>
         <form method="get" action="https://echo.htmlacademy.ru">
         	<fieldset>
         		<legend>Инфраструктура:</legend>
         		<ul>
-        			<li><label><input type="checkbox" name="pool" checked>Бассейн</label></li>
+        			<li><label><input type="checkbox" name="pool" checked>Бассейн</label></li><!-- решить вопрос с чекобоксами -->
         			<li><label><input type="checkbox" name="parking">Паркинг</label></li>
         			<li><label><input type="checkbox" name="wifi">Wi-Fi</label></li>
         		</ul>
@@ -41,101 +45,100 @@
         	</fieldset>
         		<p>Стоимость в сутки (Р):</p>
         		<ul>
-        			<li><input type="number" name="minprice" placeholder="ОТ 0"></li>
-        			<li><input type="number" name="maxprice" placeholder="ДО 3000"></li>
+        			<li><input type="number" name="minprice" placeholder="ОТ 0" id="idminprice"></li>
+        			<li><input type="number" name="maxprice" placeholder="ДО 3000" id="idmaxprice"></li>
         		</ul>
-        		<!-- Здесь должны быть ползунки, думал над input type "range" но там только один -->
-        		<input type="submit" value="Показать">
+        		<label for="idminprice"><!-- Пока есть один полузнок привязал его к минимуму -->
+        		<input type="range" name="pricerange" min="0" max="3000">
+        		</label>
+        		<button type="submit">Показать</button>
         </form>
       </section>
       <section>
-      	<h2>Результаты поиска</h2>
+      	<h2 class="visually-hidden">Результаты поиска</h2>
       	<div>
       		<p>Найдено:3</p>
       		<div>
-      			<p>Сортировка:</p><!-- блок с сортировкой вероятно неправильно размечен, влепил div пока -->
+      			<p>Сортировка:</p>
       			<ul>
 		      		<li><a href="">По цене</a></li>
 		      		<li><a href="#">По типу</a></li>
 		      		<li><a href="#">По рейтингу</a></li>
       			</ul>
       		</div>
-      	<a href="#"><img src="https://via.placeholder.com/11x10" alt="Впред" width="11" height="10"></a> <!-- эти две кнопки тоже вероятно неправльно размечены -->
-      	<a href="#"><img src="https://via.placeholder.com/11x10" alt="Назад" width="11" height="10"></a>
+          <form action="#"><!-- Не понимаю как действуют такие элементы, обернул в форму, чтобы сделать кнопки кликабельными, т.к. когда добавлял внутрь кнопки ссылку ругался валидатор -->
+            <button type="submit" name="Вперед">
+              <img src="https://via.placeholder.com/11x10" alt="Впред" width="11" height="10">
+            </button>
+        	  <button type="submit" name="Назад">
+              <img src="https://via.placeholder.com/11x10" alt="Назад" width="11" height="10">
+            </button>
+          </form>
       </div>
-
-      <ul>
-      	<li>
+      <article>
       		<img src="https://via.placeholder.com/135x90" alt="Гостиница Amara Resort & Spa" width="135" height="90">
       		<h3>Amara Resort & Spa</h3>
       		<p>Гостиница</p>
       		<p>От 4000 Р.</p>
       		<a href="#">Подробнее</a><!-- сами кнопки планирую сверстать через css -->
       		<a href="#">Забронировать</a>
-      	
       		<ul>
-      			<li><img src="https://via.placeholder.com/19x17" alt="Звезда рейтинга гостиницы" width="19" height="17"></li>
+      			<li><span><!-- звезда из css --></span></li>
       		 	<!-- здесь возможно не нужны альты, да и таблица :)-->
-	      		<li><img src="https://via.placeholder.com/19x17" alt="Звезда рейтинга гостиницы" width="19" height="17"></li>
-	      		<li><img src="https://via.placeholder.com/19x17" alt="Звезда рейтинга гостиницы" width="19" height="17"></li>
-	      		<li><img src="https://via.placeholder.com/19x17" alt="Звезда рейтинга гостиницы" width="19" height="17"></li>
+	      		<li><span><!-- звезда из css --></span></li>
+	      		<li><span><!-- звезда из css --></span></li>
+	      		<li><span><!-- звезда из css --></span></li>
 	      	</ul>
       		<p>Рейтинг: 8,5</p>
-      	</li>
-      	<li><img src="https://via.placeholder.com/135x90" alt="Гостиница Desert Quail Inn" width="135" height="90">
+        </article>
+        <article>
+      	<img src="https://via.placeholder.com/135x90" alt="Гостиница Desert Quail Inn" width="135" height="90">
       		<h3>Desert Quail Inn</h3>
       		<p>Мотель</p>
       		<p>От 3000 Р.</p>
       		<a href="#">Подробнее</a>
       		<a href="#">Забронировать</a>
       		<ul>
-      			<li><img src="https://via.placeholder.com/19x17" alt="Звезда рейтинга гостиницы" width="19" height="17"></li>
-      		 	<!-- здесь возможно не нужны альты, да и таблица :)-->
-	      		<li><img src="https://via.placeholder.com/19x17" alt="Звезда рейтинга гостиницы" width="19" height="17"></li>
-	      		<li><img src="https://via.placeholder.com/19x17" alt="Звезда рейтинга гостиницы" width="19" height="17"></li>
+      			<li><span><!-- звезда из css --></span></li>
+	      		<li><span><!-- звезда из css --></span></li>
+	      		<li><span><!-- звезда из css --></span></li>
       		</ul>
       		<p>Рейтинг: 8,9</p>
-      	</li>
-      	<li><img src="https://via.placeholder.com/135x90" alt="Гостиница Villas at Poco Diablo" width="135" height="90">
+        </article>
+      	<article>
+      	<img src="https://via.placeholder.com/135x90" alt="Гостиница Villas at Poco Diablo" width="135" height="90">
       		<h3>Villas at Poco Diablo</h3>
       		<p>Апартаменты</p>
       		<p>От 2000 Р.</p>
       		<a href="#">Подробнее</a>
       		<a href="#">Забронировать</a>
       		<ul>
-      			<li><img src="https://via.placeholder.com/19x17" alt="Звезда рейтинга гостиницы" width="19" height="17"></li>
-      		 	<!-- здесь возможно не нужны альты, да и таблица :)-->
-	      		<li><img src="https://via.placeholder.com/19x17" alt="Звезда рейтинга гостиницы" width="19" height="17"></li>
+      			<li><span><!-- звезда из css --></span></li>
+	      		<li><span><!-- звезда из css --></span></li>
       		</ul>
       		<p>Рейтинг: 9,5</p>
-      	</li>
-      </ul>
-
+      	</article>
       </section>
-  		
   	</main>
   	<footer>
-      <h2>Контакты</h2>
+      <h2 class="visually-hidden">Контакты</h2>
       <p>#VISITSEDONA<br>ТЕЛ:<a href="tel:+79656660166">+7(965) 666-01-66</a></p>
-      <h2>Соц. сети</h2>
+      <h2 class="visually-hidden">Соц. сети</h2>
       <ul>
-        <li> <!-- Так же не уверен в уместности тега div в этом списке, разместил его, так как в макете иконки соц сетей отрисованы отдельно от квадратов. Скорее всего квадраты нужно делать через CSS -->
+        <li>
           <a href="#">
-            <div><img src="https://via.placeholder.com/17x17" alt="twitter" width="17" height="17"></div>
           </a>
         </li>
         <li>
           <a href="#">
-            <div><img src="https://via.placeholder.com/12x22" alt="facebook" width="12" height="22"></div>
           </a>
         </li>
         <li>
           <a href="#">
-            <div><img src="https://via.placeholder.com/20x16" alt="youtube" width="20" height="16"></div>
           </a>
         </li>
       </ul>
-      <h2>Copyright</h2>
+      <h2 class="visually-hidden">Copyright</h2>
       <p>WEBSITE BY</p>
       <img src="https://via.placeholder.com/115x41" alt="HTMLAcademy" width="115" height="41">
     </footer>
