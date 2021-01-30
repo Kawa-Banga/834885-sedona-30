@@ -1,110 +1,115 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="page">
   <head>
     <meta charset="utf-8">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="logo.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="logo.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/normalize.css">
+	  <link rel="stylesheet" href="fonts/PTSans.woff",
+		  rel="stylesheet" href="fonts/PTSans-Bold.woff",
+		  rel="stylesheet" href="fonts/PTSans.woff2",
+		  rel="stylesheet" href="fonts/PTSans-Bold.woff",
+		  rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <title>Седона</title>
   </head>
-  <body>
-  	<header>
-  		<nav>
-  			<ul>
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и Видео</a></li>
-          <li><a href=""></a><!-- убрал логотип, размечал изначально по аналогии с барбершопом, но теперь понял, что там он контентный, потому что логотип - название, а здесь декоративный --></li>
-          <li><a href="#">Карта штата</a></li>
-          <li><a href="catalog.html">Гостиницы</a></li>
-        </ul>
+  <body class="page-body">
+  	<header class="main-header">
+  		<nav class="main-nav">
+  			<ul class="main-nav-list text text-tall text-black">
+	          <li><a href="#">Информация</a></li>
+	          <li><a href="#">Фото и Видео</a></li>
+	          <li><a href="" class="main-header-logo"></a></li>
+	          <li><a href="#">Карта штата</a></li>
+	          <li><a href="catalog.html">Гостиницы</a></li>
+        	</ul>
   		</nav>
   	</header>
   	<main>
   		<h1 class="visually-hidden">Туристический город Седона</h1>
-      <img src="img/bg_sedona_landscape.jpg" alt="Пейзаж Седоны" width="1200" height="509">
-  		<img src="img/welcome.svg" alt="Добро пожаловать" width="187" height="44">
-      <img src="img/gorgeous.svg" alt="в великолепную" width="255" height="28">
-      <img src="img/sedona.svg" alt="Седону" width="456" height="213">
-  		<p>Седона - небольшой городок в Аризоне, заслуживающий Большего!</p>
-  		<p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+      <img class="sedona-landscape-img" src="img/bg_sedona_landscape.jpg" alt="Пейзаж Седоны" width="1200" height="509">
+  		<img class="welcome-img" src="img/welcome.svg" alt="Добро пожаловать" width="187" height="44">
+      <img class="gorgeous-img" src="img/gorgeous.svg" alt="в великолепную" width="255" height="28">
+      <img class="sedona-title-img" src="img/sedona.svg" alt="Седону" width="456" height="213">
+  		<p class="subtitle text-black text-tall">Седона - небольшой городок в Аризоне, заслуживающий Большего!</p>
+  		<p class="text text-tall text-black">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
   		<h2 class="visually-hidden">5 преимуществ Седоны</h2>
-  		<section><!-- Секция захватывает список ниже, из-за одного смыслового контекста - Преимущество №1 -->
-  			<div> <!-- Для отдельной окраски горизонтального блока в дальнейшем. Чтобы фон за картинкой был тоже голубым, если картинка не подгрузится -->
-  				<h2>Настоящий<br>городок</h2>
+  		<section class="feature-1">
+  			<div class="feature-item-blue-bg text text-low text-white">
+  				<h2 class="subtitle">Настоящий<br>городок</h2>
 	  			<p>-№1-</p>
 	  			<p>Седона - не аттракциона для туристов, там течет своя жизнь</p>
-	  			<img src="img/sedona_life.jpg" alt="Жизнь в Седоне" width="800" height="256">
+	  			<img class="life-in-sedon-img" src="img/sedona_life.jpg" alt="Жизнь в Седоне" width="800" height="256">
 	  		</div>
-  			<ul>
+  			<ul class="text text-low text-black">
   				<li>
-  					<h3>Жильё</h3>
+  					<h3 class="subtitle">Жильё</h3>
   					<p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
   				</li>
   				<li>
-  					<h3>Еда</h3>
+  					<h3 class="subtitle">Еда</h3>
   					<p>Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
   				</li>
   				<li>
-  					<h3>Сувениры</h3>
+  					<h3 class="subtitle">Сувениры</h3>
   					<p>Не только китайского, но и местного производства!</p>
   				</li>
   			</ul>
   		</section>
-  		<section>
-  			<div><!-- Так же как и с div'ом выше -->
-          <img src="img/devils_bridge.jpg" alt="Мост Дьявола" width="800" height="256">
-    			<h2>Там есть<br>Мост Дьявола</h2>
+  		<section class="feature-item-blue-bg text text-low text-white">
+          <img class="devils-bridge-img" src="img/devils_bridge.jpg" alt="Мост Дьявола" width="800" height="256">
+    			<h2 class="subtitle">Там есть<br>Мост Дьявола</h2>
     			<p>-№2-</p>
     			<p>Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
-        </div>
   		</section>
-  		<section>
-  			<ul>
-          <li><h2>Небольшая<br>площадь</h2>
+  		<section class="feature-3-4-5">
+  			<ul class="text text-low text-black">
+          		<li>
+          			<h2 class="subtitle">Небольшая<br>площадь</h2>
   					<p>-№3-</p>
   					<p>Все достопримечательности находятся очень близко</p>
-  		    </li>
-          <li>
-  			     <h2>Красивая<br>дорога</h2>
+  		    	</li>
+          		<li>
+  			     	<h2 class="subtitle">Красивая<br>дорога</h2>
   					<p>-№4-</p>
   					<p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-          </li>
-          <li>
-  			<h2>Мало<br>туристов</h2>
+          		</li>
+          		<li>
+  					<h2 class="subtitle">Мало<br>туристов</h2>
   					<p>-№5-</p>
   					<p>Большинство едет в Гранд Каньон и толпится там</p>
-          </li>
-        </ul>
+          		</li>
+        	</ul>
   		</section>
-  		<section>
+  		<section class="call-to-action text-black">
   			<h2 class="visually-hidden">Поиск гостиниц</h2>
-  			<p>Заинтересовались?</p>
-  			<p>Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
-  			<button  type="button">Поиск гостиниц в Седоне</button> <!-- это же не модальное окно, а кнопка, которая его вызывает, разве нет? -->
-  			<!-- Здесь будет карта-->
+  			<p class="subtitle-call-to-action">Заинтересовались?</p>
+  			<p class="text text-low">Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
+  			<button class="button-brown button-big subtitle text-tall" type="button">Поиск гостиниц в Седоне</button> 
   		</section>
   	</main>
-  	<footer>
+  	<footer class="main-footer text-tall text-black subtitle">
       <h2 class="visually-hidden">Контакты</h2>
       <p>#VISITSEDONA<br>ТЕЛ:<a href="tel:+79656660166">+7(965) 666-01-66</a></p>
       <h2 class="visually-hidden">Соц. сети</h2>
       <ul>
         <li>
-          <a href="#">
+          <a class="social-button" href="#">
           </a>
         </li>
         <li>
-          <a href="#">
+          <a class="social-button" href="#">
           </a>
         </li>
         <li>
-          <a href="#">
+          <a class="social-button" href="#">
           </a>
         </li>
       </ul>
       <h2 class="visually-hidden">Copyright</h2>
-      <p>WEBSITE BY</p>
+      <p class="text">WEBSITE BY</p>
       <a href="htmlacademy.ru">
       	<img src="img/htmlacademy_logo.svg" alt="Логотип HTMLAcademy" width="115" height="41">
       </a>

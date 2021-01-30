@@ -1,0 +1,131 @@
+:root {
+  --basic-white: #ffffff;
+  --basic-black: #000000;
+  --special-text-black: #333333;
+  --basic-blue: #81B3D2;
+  --hover-blue: #669EC0;
+  --active-blue: #5496BD;
+  --basic-brown: #766357;
+  --hover-brown: #604E43;
+  --active-brown: #503E33;
+  --basic-grey: #F2F2F2;
+  --disabled-grey: #6A6A6A;
+  --feature-grey: #EEEEEE;
+  --hower-grey: #EBEBEB;
+  --focus-border-grey: #E5E5E5;
+  --button-basic-grey: #A9A9A9;
+  --button-updown-basic: #CACACA;
+  --rating-text-grey: #666666;
+  --basic-htmlacademy-grey: #231F20;
+  --active-htmlacademy-grey: #BDBBBC;
+}
+
+.page {
+	font-family: "PTSans", "Arial", sans-serif;
+	text-transform: uppercase;
+	background: var(--basic-white);
+}
+
+.page-body {
+
+}
+
+.main-header {
+
+}
+
+.main-nav {
+
+}
+
+.main-nav-list {
+
+}
+
+.subtitle {
+
+}
+
+.text {
+
+}
+
+.text-tall {
+
+}
+
+.text-low {
+
+}
+
+.text-black {
+
+}
+
+.text-white {
+
+}
+
+.main-header-logo {
+
+}
+
+.sedona-landscape-img {
+
+}
+
+.welcome-img {
+
+}
+
+.gorgeous-img {
+
+}
+
+.sedona-title-img {
+
+}
+
+.devils-bridge-img {
+
+}
+
+.feature-1 {
+
+}
+
+.feature-item-blue-bg {
+
+}
+
+.life-in-sedon-img {
+
+}
+
+.feature-3-4-5 {
+
+}
+
+.call-to-action {
+
+}
+
+.subtitle-call-to-action {
+
+}
+
+.button-brown {
+
+}
+
+.button-big {
+
+}
+
+.main-footer {
+
+}
+
+.social-button {
+
+}
