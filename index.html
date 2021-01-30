@@ -18,12 +18,12 @@
   <body class="page-body">
   	<header class="main-header">
   		<nav class="main-nav">
-  			<ul class="main-nav-list text text-tall text-black">
-	          <li><a href="#">Информация</a></li>
-	          <li><a href="#">Фото и Видео</a></li>
-	          <li><a href="" class="main-header-logo"></a></li>
-	          <li><a href="#">Карта штата</a></li>
-	          <li><a href="catalog.html">Гостиницы</a></li>
+  			<ul class="main-nav-list text-tall text-bold">
+	          <li><a class="link" href="#">Информация</a></li>
+	          <li><a class="link" href="#">Фото и Видео</a></li>
+	          <li><a class="logo" href=""></a></li> <!-- не получается добавить изображение -->
+	          <li><a class="link" href="#">Карта штата</a></li>
+	          <li><a class="link" href="catalog.html">Гостиницы</a></li>
         	</ul>
   		</nav>
   	</header>
@@ -33,17 +33,18 @@
   		<img class="welcome-img" src="img/welcome.svg" alt="Добро пожаловать" width="187" height="44">
       <img class="gorgeous-img" src="img/gorgeous.svg" alt="в великолепную" width="255" height="28">
       <img class="sedona-title-img" src="img/sedona.svg" alt="Седону" width="456" height="213">
-  		<p class="subtitle text-black text-tall">Седона - небольшой городок в Аризоне, заслуживающий Большего!</p>
-  		<p class="text text-tall text-black">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+      <div class="sedona-lanscape-cut"></div> <!-- для картинки -срезки фона --> <!-- не получается добавить изображение -->
+  		<p class="subtitle text-tall">Седона - небольшой городок в Аризоне, заслуживающий Большего!</p>
+  		<p class="text-tall">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
   		<h2 class="visually-hidden">5 преимуществ Седоны</h2>
   		<section class="feature-1">
-  			<div class="feature-item-blue-bg text text-low text-white">
+  			<div class="feature-item-blue-bg text-low text-white">
   				<h2 class="subtitle">Настоящий<br>городок</h2>
 	  			<p>-№1-</p>
 	  			<p>Седона - не аттракциона для туристов, там течет своя жизнь</p>
-	  			<img class="life-in-sedon-img" src="img/sedona_life.jpg" alt="Жизнь в Седоне" width="800" height="256">
+	  			<img class="life-in-sedona-img" src="img/sedona_life.jpg" alt="Жизнь в Седоне" width="800" height="256">
 	  		</div>
-  			<ul class="text text-low text-black">
+  			<ul class="text-low list-unmarked">
   				<li>
   					<h3 class="subtitle">Жильё</h3>
   					<p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
@@ -58,14 +59,14 @@
   				</li>
   			</ul>
   		</section>
-  		<section class="feature-item-blue-bg text text-low text-white">
+  		<section class="feature-item-blue-bg text-low text-white">
           <img class="devils-bridge-img" src="img/devils_bridge.jpg" alt="Мост Дьявола" width="800" height="256">
     			<h2 class="subtitle">Там есть<br>Мост Дьявола</h2>
     			<p>-№2-</p>
     			<p>Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
   		</section>
   		<section class="feature-3-4-5">
-  			<ul class="text text-low text-black">
+  			<ul class="text-low list-unmarked">
           		<li>
           			<h2 class="subtitle">Небольшая<br>площадь</h2>
   					<p>-№3-</p>
@@ -83,33 +84,33 @@
           		</li>
         	</ul>
   		</section>
-  		<section class="call-to-action text-black">
+  		<section class="call-to-action">
   			<h2 class="visually-hidden">Поиск гостиниц</h2>
-  			<p class="subtitle-call-to-action">Заинтересовались?</p>
-  			<p class="text text-low">Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
-  			<button class="button-brown button-big subtitle text-tall" type="button">Поиск гостиниц в Седоне</button> 
+  			<p class="subtitle-call-to-action text-bold">Заинтересовались?</p>
+  			<p class="text-low">Укажите предполагаемые даты поездки,<br>и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
+  			<button class="button-brown button-big subtitle text-tall text-white" type="button">Поиск гостиниц в Седоне</button>
   		</section>
   	</main>
-  	<footer class="main-footer text-tall text-black subtitle">
+  	<footer class="main-footer text-tall subtitle">
       <h2 class="visually-hidden">Контакты</h2>
       <p>#VISITSEDONA<br>ТЕЛ:<a href="tel:+79656660166">+7(965) 666-01-66</a></p>
       <h2 class="visually-hidden">Соц. сети</h2>
-      <ul>
+      <ul class="list-unmarked">
         <li>
-          <a class="social-button" href="#">
+          <a class="social-button link-social twitter-button" href="#">
           </a>
         </li>
         <li>
-          <a class="social-button" href="#">
+          <a class="social-button link-social facebook-button" href="#">
           </a>
         </li>
         <li>
-          <a class="social-button" href="#">
+          <a class="social-button link-social youtube-button" href="#">
           </a>
         </li>
       </ul>
       <h2 class="visually-hidden">Copyright</h2>
-      <p class="text">WEBSITE BY</p>
+      <p>WEBSITE BY</p>
       <a href="htmlacademy.ru">
       	<img src="img/htmlacademy_logo.svg" alt="Логотип HTMLAcademy" width="115" height="41">
       </a>

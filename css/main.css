@@ -18,16 +18,24 @@
   --rating-text-grey: #666666;
   --basic-htmlacademy-grey: #231F20;
   --active-htmlacademy-grey: #BDBBBC;
+  --transparent-white: rgba(255, 255, 255, 0.9);
 }
 
 .page {
-	font-family: "PTSans", "Arial", sans-serif;
-	text-transform: uppercase;
-	background: var(--basic-white);
 }
 
 .page-body {
-
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  background-color: var(--basic-white);
+  text-align: center;
 }
 
 .main-header {
@@ -39,31 +47,38 @@
 }
 
 .main-nav-list {
+	list-style: none;
+}
 
+.logo {
+	background-image: url("../img/logo.png");
+	background-color: var(--basic-blue);
 }
 
 .subtitle {
-
-}
-
-.text {
-
+	font-size: 21px;
+	text-transform: uppercase; /*повторил это свойство, т.к. в button внизу оно почему-то не наследовалось */
 }
 
 .text-tall {
-
+	line-height: 26px;
 }
 
 .text-low {
-
-}
-
-.text-black {
-
+	line-height: 21px;
 }
 
 .text-white {
+	color: var(--basic-white);
+}
 
+.text-bold {
+	font-weight: bold;
+}
+
+.link {
+	text-decoration: none;
+	color: var(--basic-black);
 }
 
 .main-header-logo {
@@ -71,39 +86,42 @@
 }
 
 .sedona-landscape-img {
+	background-color: var(--basic-blue);
+}
 
+.sedona-lanscape-cut {
+	background-image: url("../img/sedona-lanscape-cut.svg");
 }
 
 .welcome-img {
-
+	background-color: var(--basic-white);
 }
 
 .gorgeous-img {
-
+	background-color: var(--basic-white);
 }
 
 .sedona-title-img {
-
-}
-
-.devils-bridge-img {
-
+	background-color: var(--basic-white);
 }
 
 .feature-1 {
-
 }
 
 .feature-item-blue-bg {
-
+	background-color: var(--basic-blue);
 }
 
-.life-in-sedon-img {
+.life-in-sedona-img {
+	background-color: var(--hover-blue);
+}
 
+.devils-bridge-img {
+	background-color: var(--hover-blue);
 }
 
 .feature-3-4-5 {
-
+	background-color: var(--feature-grey);
 }
 
 .call-to-action {
@@ -111,21 +129,73 @@
 }
 
 .subtitle-call-to-action {
-
+	font-size: 30px;
+	line-height: 24px;
 }
 
 .button-brown {
+	background-color: var(--basic-brown);
+}
 
+.button-brown:hover {
+	background-color: var(--hover-brown);
+}
+.button-brown:active {
+	background-color: var(--active-brown);
 }
 
 .button-big {
-
+	background-size: 568px 86px;/* Тоже непонял почему не работает */
 }
 
 .main-footer {
-
+	background-color: var(--transparent-white);/*Не уверен, нужно ли было выносить полупрозрасный в отдельный цвет  */
 }
 
 .social-button {
+	background-color: var(--basic-blue);
+}
 
+.social-button:hover {
+	background-color: var(--hover-blue);
+}
+
+.social-button:active {
+	background-color: var(--active-blue);
+}
+
+
+.twitter-button {
+	background-image: url("../img/twitter.png");/* и здесь непонял почему не работает */
+}
+
+.facebook-button {
+	background-image: url("../img/facebook.png");
+}
+
+.youtube-button {
+	background-image: url("../img/youtube.png");
+}
+
+.list-unmarked {
+	list-style: none;
+}
+
+.visually-hidden {
+	visibility: hidden;
+}
+
+.link-social {
+
+}
+
+.main-nav-list .link:hover {
+	color: var(--hover-blue);
+}
+
+.main-nav-list .link:active {
+	color: var(--basic-black);
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	opacity: 0.3;
+	-webkit-text-stroke: 1px black;
 }
