@@ -6,140 +6,148 @@
     <link rel="icon" href="logo.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="logo.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>Седона</title>
   </head>
-  <body>
+  <body class="page-body">
   	<header>
   		<nav>
-  			<ul>
-  				<li><a href="#">Информация</a></li>
-  				<li><a href="#">Фото и Видео</a></li>
-  				<li><a href="index.html"></a></li>
-  				<li><a href="#">Карта штата</a></li>
-  				<li><a href="">Гостиницы</a></li>
-  			</ul>
-  		</nav>
+        <ul class="main-nav-list text-tall text-bold">
+            <li><a class="link-unmarked text-black" href="#">Информация</a></li>
+            <li><a class="link-unmarked text-black" href="#">Фото и Видео</a></li>
+            <li class="logo"><a href="index.html"></a></li>
+            <li><a class="link-unmarked text-black" href="#">Карта штата</a></li>
+            <li><a class="link-unmarked text-black" href="">Гостиницы</a></li>
+          </ul>
+      </nav>
   	</header>
   	<main>
       <h1 class="visually-hidden">Каталог гостиниц</h1>
-      <section>
+      <section class="offer-filter">
         <h2 class="visually-hidden">Фильтр предложений</h2>
         <form method="get" action="https://echo.htmlacademy.ru">
-        	<fieldset>
-        		<legend>Инфраструктура:</legend>
-        		<ul>
-        			<li><label><input type="checkbox" name="pool" checked>Бассейн</label></li><!-- решить вопрос с чекобоксами -->
-        			<li><label><input type="checkbox" name="parking">Паркинг</label></li>
-        			<li><label><input type="checkbox" name="wifi">Wi-Fi</label></li>
+        	<fieldset class="list-unmarked">
+        		<legend class="filter-title text-low text-bold text-uppercase text-white">Инфраструктура:</legend>
+        		<ul class="text-uppercase text-white list-unmarked text-low">
+        			<li><label><input type="text" name="pool">Бассейн</label></li> <!-- вопрос с визуальным отображением чекбоксов решается сейчас или на следующих этапах? -->
+        			<li><label><input type="text" name="parking">Паркинг</label></li>
+        			<li><label><input type="text" name="wifi">Wi-Fi</label></li>
         		</ul>
         	</fieldset>
-        	<fieldset>
-        		<legend>Тип Жилья:</legend>
-        		<ul>
-        			<li><label><input type="checkbox" name="hotel" checked>Гостиница</label></li>
-        			<li><label><input type="checkbox" name="motel" checked>Мотель</label></li>
-        			<li><label><input type="checkbox" name="apartments" checked>Апартаменты</label></li>
+        	<fieldset class="list-unmarked">
+        		<legend class="filter-title text-low text-bold text-uppercase text-white">Тип Жилья:</legend>
+        		<ul class="text-uppercase text-white list-unmarked text-low">
+        			<li><label><input type="text" name="hotel">Гостиница</label></li>
+        			<li><label><input type="text" name="motel">Мотель</label></li>
+        			<li><label><input type="text" name="apartments">Апартаменты</label></li>
         		</ul>
         	</fieldset>
-        		<p>Стоимость в сутки (Р):</p>
-        		<ul>
+        		<p class="filter-title text-low text-bold text-uppercase text-white">Стоимость в сутки (Р):</p>
+        		<ul class="text-uppercase text-white list-unmarked text-low">
         			<li><input type="number" name="minprice" placeholder="ОТ 0" id="idminprice"></li>
         			<li><input type="number" name="maxprice" placeholder="ДО 3000" id="idmaxprice"></li>
         		</ul>
-        		<label for="idminprice"><!-- Пока есть один полузнок привязал его к минимуму -->
+        		<label for="idminprice">
         		<input type="range" name="pricerange" min="0" max="3000">
         		</label>
-        		<button type="submit">Показать</button>
+        		<button class="button-transparent" type="submit">Показать</button>
         </form>
       </section>
-      <section>
+      <section class="search-results">
       	<h2 class="visually-hidden">Результаты поиска</h2>
       	<div>
-      		<p>Найдено:3</p>
+      		<p class="subtitle text-tall text-black">Найдено:3</p>
       		<div>
       			<p>Сортировка:</p>
-      			<ul>
-		      		<li><a href="">По цене</a></li>
-		      		<li><a href="#">По типу</a></li>
-		      		<li><a href="#">По рейтингу</a></li>
+      			<ul class="list-unmarked">
+		      		<li><a class="link-unmarked" href=""><span class="button-filter-price">По цене</span></a></li>
+		      		<li><a class="button-text-underline link-unmarked" href="#"><span class="button-filter-type">По типу</span></a></li>
+		      		<li><a class="button-text-underline link-unmarked" href="#"><span class="button-filter-rate">По рейтингу</span></a></li>
       			</ul>
       		</div>
-      		<a href=""><img src="img/arrow_up.svg" alt="Сортировать по возрастанию" width="11" height="10"></a>
-        	<a href="#"><img src="img/arrow_down.svg" alt="Сортировать по убыванию" width="11" height="10"></a>
+      		<a class="button-up" href=""><img src="img/arrow-up-basic.svg" alt="Сортировать по возрастанию" width="11" height="10"></a>
+        	<a class="button-down" href="#"><img src="img/arrow-down-basic.svg" alt="Сортировать по убыванию" width="11" height="10"></a>
         </div>
       </section>
       <section>
-        <article>
-      		<img src="img/amara_resort_spa.jpg" alt="Гостиница Amara Resort & Spa" width="135" height="90">
-      		<h3>Amara Resort & Spa</h3>
+        <article class="results-item text-uppercase text-low">
+      		<a class="link-unmarked" href="#">
+            <img src="img/amara_resort_spa.jpg" alt="Гостиница Amara Resort & Spa" width="135" height="90">
+      		  <h3 class="subtitle text-tall text-black">Amara Resort & Spa</h3></a>
       		<p>Гостиница</p>
       		<p>От 4000 Р.</p>
-      		<a href="#">Подробнее</a><!-- сами кнопки планирую сверстать через css -->
-      		<a href="#">Забронировать</a>
-      		<ul>
-      			<li><span><!-- звезда из css --></span></li>
+      		<a class="button-blue text text-bold text-low text-white link-unmarked" href="#">Подробнее</a>
+      		<a class="button-brown text text-bold text-low text-white link-unmarked" href="#">Забронировать</a>
+      		<ul class="list-unmarked">
+            <li><span class="rating-star"><!-- звезда из css --></span></li>
       		 	<!-- здесь возможно не нужны альты, да и таблица :)-->
-	      		<li><span><!-- звезда из css --></span></li>
-	      		<li><span><!-- звезда из css --></span></li>
-	      		<li><span><!-- звезда из css --></span></li>
+            <li><span class="rating-star"><!-- звезда из css --></span></li>
+            <li><span class="rating-star"><!-- звезда из css --></span></li>
+            <li><span class="rating-star"><!-- звезда из css --></span></li>
 	      	</ul>
-      		<p>Рейтинг: 8,5</p>
+      		<button class="button-rating">Рейтинг: 8,5</button>
         </article>
       </section>
       <section>
-        <article>
-          <img src="img/desert_quail_inn.jpg" alt="Гостиница Desert Quail Inn" width="135" height="90">
-      		<h3>Desert Quail Inn</h3>
+        <article class="results-item text-uppercase text-low">
+          <a class="link-unmarked" href="#">
+            <img src="img/desert_quail_inn.jpg" alt="Гостиница Desert Quail Inn" width="135" height="90">
+      		  <h3 class="subtitle text-tall text-black">Desert Quail Inn</h3></a>
       		<p>Мотель</p>
       		<p>От 3000 Р.</p>
-      		<a href="#">Подробнее</a>
-      		<a href="#">Забронировать</a>
-      		<ul>
-      			<li><span><!-- звезда из css --></span></li>
-	      		<li><span><!-- звезда из css --></span></li>
-	      		<li><span><!-- звезда из css --></span></li>
+      		<a class="button-blue text text-bold text-low text-white link-unmarked" href="#">Подробнее</a>
+      		<a class="button-brown text text-bold text-low text-white link-unmarked" href="#">Забронировать</a>
+      		<ul class="list-unmarked">
+            <li><span class="rating-star"><!-- звезда из css --></span></li>
+            <li><span class="rating-star"><!-- звезда из css --></span></li>
+            <li><span class="rating-star"><!-- звезда из css --></span></li>
+            <li><span class="rating-star"><!-- звезда из css --></span></li>
+            <li><span class="rating-star"><!-- звезда из css --></span></li>
+            <li><span class="rating-star"><!-- звезда из css --></span></li>
       		</ul>
-      		<p>Рейтинг: 8,9</p>
+      		<button class="button-rating">Рейтинг: 8,9</button>
         </article>
       </section>
       <section>
-      	<article>
-      	<img src="img/villas_at_poco_diablo.jpg" alt="Гостиница Villas at Poco Diablo" width="135" height="90">
-      		<h3>Villas at Poco Diablo</h3>
+      	<article class="results-item text-uppercase text-low">
+      	  <a class="link-unmarked" href="#">
+            <img src="img/villas_at_poco_diablo.jpg" alt="Гостиница Villas at Poco Diablo" width="135" height="90">
+      		  <h3 class="subtitle text-tall text-black">Villas at Poco Diablo</h3></a>
       		<p>Апартаменты</p>
       		<p>От 2000 Р.</p>
-      		<a href="#">Подробнее</a>
-      		<a href="#">Забронировать</a>
-      		<ul>
-      			<li><span><!-- звезда из css --></span></li>
-	      		<li><span><!-- звезда из css --></span></li>
+      		<a class="button-blue text text-bold text-low text-white link-unmarked" href="#">Подробнее</a>
+      		<a class="button-brown text text-bold text-low text-white link-unmarked" href="#">Забронировать</a>
+      		<ul class="list-unmarked">
+      			<li><span class="rating-star"><!-- звезда из css --></span></li>
+	      		<li><span class="rating-star"><!-- звезда из css --></span></li>
       		</ul>
-      		<p>Рейтинг: 9,5</p>
+      		<button class="button-rating">Рейтинг: 9,5</button>
       	</article>
       </section>
   	</main>
-  	<footer>
+  	<footer class="main-footer text-tall text-black text-uppercase">
       <h2 class="visually-hidden">Контакты</h2>
-      <p>#VISITSEDONA<br>ТЕЛ:<a href="tel:+79656660166">+7(965) 666-01-66</a></p>
+      <p class="subtitle">#VISITSEDONA<br>ТЕЛ:<a class="link-unmarked text-black" href="tel:+79656660166">+7(965) 666-01-66</a></p>
       <h2 class="visually-hidden">Соц. сети</h2>
-      <ul>
+      <ul class="list-unmarked">
         <li>
-          <a href="#">
+          <a class="social-button twitter-button" href="#">
           </a>
         </li>
         <li>
-          <a href="#">
+          <a class="social-button facebook-button" href="#">
           </a>
         </li>
         <li>
-          <a href="#">
+          <a class="social-button youtube-button" href="#">
           </a>
         </li>
       </ul>
       <h2 class="visually-hidden">Copyright</h2>
       <p>WEBSITE BY</p>
       <a href="htmlacademy.ru">
-        <img src="img/htmlacademy_logo.svg" alt="Логотип HTMLAcademy" width="115" height="41">
+        <img src="img/htmlacademy_logo.svg" alt="Логотип HTMLAcademy" width="115" height="41"> <!-- здесь не понял, как сделать состояния -->
       </a>
     </footer>
   </body>

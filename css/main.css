@@ -56,7 +56,7 @@
 }
 
 .logo {
-	background-image: url("../img/logo.png");
+	background: url("../img/logo.png") no-repeat center;
 	background-color: var(--basic-blue);
 }
 
@@ -64,7 +64,6 @@
 	font-size: 21px;
 	text-transform: uppercase;
 	font-weight: bold;
-	text-align: center;
 }
 
 .text-uppercase { 
@@ -91,13 +90,12 @@
 	font-weight: bold;
 }
 
-.link {
+.link-unmarked {
 	text-decoration: none;
-	color: var(--basic-black);
 }
 
 .header-bg-cut {
-	background-image: url("../img/sedona-lanscape-cut.svg");
+	background: url("../img/sedona-lanscape-cut.svg") no-repeat;
 }
 
 .img-bg-white {
@@ -118,6 +116,18 @@
 	color: var(--basic-black);
 }
 
+.button-blue {
+	background-color: var(--basic-blue);
+}
+
+.button-blue:hover {
+	background-color: var(--hover-blue);
+}
+
+.button-blue:active {
+	background-color: var(--active-blue);
+}
+
 .button-brown {
 	background-color: var(--basic-brown);
 }
@@ -131,6 +141,13 @@
 
 .button-big {
 	background-size: 568px 86px;/* Тоже непонял почему не работает */
+}
+
+.button-transparent {
+	background-color: transparent;
+	border: 2px solid var(--basic-white);
+	border-radius: 2px;
+	color: var(--basic-white);
 }
 
 .main-footer {
@@ -151,19 +168,20 @@
 }
 
 .twitter-button {
-	background-image: url("../img/twitter.png");/* и здесь непонял почему не работает */
+	background: url("../img/twitter.png") no-repeat;/* и здесь непонял почему не работает */
 }
 
 .facebook-button {
-	background-image: url("../img/facebook.png");
+	background: url("../img/facebook.png") no-repeat;
 }
 
 .youtube-button {
-	background-image: url("../img/youtube.png");
+	background: url("../img/youtube.png") no-repeat;
 }
 
 .list-unmarked {
 	list-style: none;
+	border: 0 none;
 }
 
 .visually-hidden {
@@ -184,11 +202,95 @@
 .feature-list {
 	background-color: var(--feature-grey);
 	text-align: center;
-
 }
 
 .header-images,
 .call-to-action,
 .feature {
 	text-align: center;
+}
+
+.filter-title {
+	font-size: 16px;
+}
+
+.offer-filter {
+	background: url("../img/filter-background.jpg") no-repeat;
+}
+
+.search-results {
+	text-align: left;
+	color: var(--basic-black);
+	font-size: 12px;
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
+.button-filter-price {
+	color: var(--basic-blue);
+}
+
+.button-filter-type {
+	color: var(--basic-black);
+	opacity: 0.3;
+}
+
+.button-filter-rate {
+	color: var(--basic-black);
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	opacity: 0.3;
+	-webkit-text-stroke: 1px black;
+}
+
+.button-text-underline {
+	border-bottom: 1px dotted var(--basic-blue);
+}
+
+.button-filter-rate:hover {
+	color: var(--basic-blue);
+	opacity: 1;
+}
+
+.button-up:hover {
+	background: url("../img/arrow-up-hover.svg") no-repeat;
+}
+
+.button-down:hover {
+	background: url("../img/arrow-down-hover.svg") no-repeat;
+}
+
+.button-up:active {
+	background: url("../img/arrow-up-active.svg") no-repeat;
+}
+
+.button-down:active {
+	background: url("../img/arrow-down-active.svg") no-repeat;
+} /*Пока не знаю как работать со слоями, когда элемент частично размещен html и частично в css*/
+
+.results-item {
+	text-align: left;
+	border-top: 1px solid var(--focus-border-grey);
+	border-bottom: 1px solid var(--focus-border-grey);
+}
+
+.results-item .subtitle:hover {
+	color: var(--basic-blue);
+}
+
+.results-item .subtitle:active {
+	color: var(--basic-black);
+	opacity: 0.3;
+}
+
+.button-rating {
+	background-color: var(--basic-grey);
+	color: var(--rating-text-grey);
+	text-align: center;
+	border: 0px;
+	text-transform: uppercase;
+}
+
+.rating-star {
+	background-image: url("../img/rating-star.svg");
+	background-size: 19px 17px;
 }
