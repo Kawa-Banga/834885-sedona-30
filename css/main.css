@@ -53,6 +53,22 @@
 	list-style: none;
 	text-transform: uppercase;
 	text-align: center;
+	text-decoration: none;
+	line-height: 26px;
+	font-weight: bold;
+}
+
+.description{
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: var(--special-text-black);
+	text-transform: uppercase;
+}
+
+.description-features {
+	text-transform: uppercase;
+	line-height: 26px;
 }
 
 .logo {
@@ -208,6 +224,7 @@
 .call-to-action,
 .feature {
 	text-align: center;
+	text-transform: uppercase;
 }
 
 .filter-title {
