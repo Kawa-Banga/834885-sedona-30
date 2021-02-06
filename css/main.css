@@ -78,8 +78,14 @@
 
 .subtitle {
 	font-size: 21px;
+	line-height: 21px;
 	text-transform: uppercase;
 	font-weight: bold;
+	color: var(--basic-black)
+}
+
+.subtitle-white	{
+	color: var(--basic-white);
 }
 
 .text-uppercase { 
@@ -108,6 +114,7 @@
 
 .link-unmarked {
 	text-decoration: none;
+	color: var(--basic-black);
 }
 
 .header-bg-cut {
@@ -130,6 +137,7 @@
 	font-size: 30px;
 	line-height: 24px;
 	color: var(--basic-black);
+	font-weight: bold;
 }
 
 .button-blue {
@@ -144,8 +152,13 @@
 	background-color: var(--active-blue);
 }
 
-.button-brown {
+.button-brown-big {
+	font-size: 21px;
+	font-weight: bold;
 	background-color: var(--basic-brown);
+	color: var(--basic-white);
+	text-transform: uppercase;
+	line-height: 26px;
 }
 
 .button-brown:hover {
@@ -153,10 +166,6 @@
 }
 .button-brown:active {
 	background-color: var(--active-brown);
-}
-
-.button-big {
-	background-size: 568px 86px;/* Тоже непонял почему не работает */
 }
 
 .button-transparent {
@@ -169,35 +178,47 @@
 .main-footer {
 	background-color: var(--transparent-white);/*Не уверен, нужно ли было выносить полупрозрачный в отдельный цвет  */
 	text-align: center;
+	line-height: 26px;
+	font-weight: bold;
+	font-size: 21px;
+	text-transform: uppercase;
+	color: var(--basic-black);
 }
 
-.social-button {
-	background-color: var(--basic-blue);
-}
-
-.social-button:hover {
+.twitter-button:hover,
+.facebook-button:hover,
+.youtube-button:hover {
 	background-color: var(--hover-blue);
 }
 
-.social-button:active {
+.twitter-button:active,
+.facebook-button:active,
+.youtube-button:active {
 	background-color: var(--active-blue);
 }
 
 .twitter-button {
+	background-color: var(--basic-blue);
 	background: url("../img/twitter.png") no-repeat;/* и здесь непонял почему не работает */
 }
 
 .facebook-button {
+	background-color: var(--basic-blue);
 	background: url("../img/facebook.png") no-repeat;
 }
 
 .youtube-button {
+	background-color: var(--basic-blue);
 	background: url("../img/youtube.png") no-repeat;
 }
 
 .list-unmarked {
 	list-style: none;
 	border: 0 none;
+}
+
+.list-unmarked li {
+	line-height: 21px;
 }
 
 .visually-hidden {
@@ -225,6 +246,10 @@
 .feature {
 	text-align: center;
 	text-transform: uppercase;
+}
+
+.feature .img-bg-blue{
+	color: var(--basic-white)
 }
 
 .filter-title {
@@ -309,4 +334,9 @@
 
 .rating-star {
 	background-image: url("../img/rating-star.svg");
+}
+
+.copyright {
+	font-size: 14px;
+	font-weight: normal;
 }
