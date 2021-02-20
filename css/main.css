@@ -55,6 +55,22 @@
 	list-style: none;
 	text-transform: uppercase;
 	text-align: center;
+	text-decoration: none;
+	line-height: 26px;
+	font-weight: bold;
+}
+
+.description{
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: var(--special-text-black);
+	text-transform: uppercase;
+}
+
+.description-features {
+	text-transform: uppercase;
+	line-height: 26px;
 }
 
 .logo {
@@ -64,36 +80,26 @@
 
 .subtitle {
 	font-size: 21px;
+	line-height: 21px;
 	text-transform: uppercase;
 	font-weight: bold;
+	color: var(--basic-black)
 }
 
-.text-uppercase { 
-	text-transform: uppercase; 
-	}
-
-.text-tall {
-	line-height: 26px;
-}
-
-.text-low {
-	line-height: 21px;
-}
-
-.text-white {
+.subtitle-white	{
 	color: var(--basic-white);
 }
 
-.text-black {
-	color: var(--basic-black);
-}
-
-.text-bold {
+.subtitle-search {
+	line-height: 26px;
+	font-size: 21px;
 	font-weight: bold;
+	text-transform: uppercase;
 }
 
 .link-unmarked {
 	text-decoration: none;
+	color: var(--basic-black);
 }
 
 .header-bg-cut {
@@ -116,10 +122,15 @@
 	font-size: 30px;
 	line-height: 24px;
 	color: var(--basic-black);
+	font-weight: bold;
 }
 
 .button-blue {
 	background-color: var(--basic-blue);
+	color: var(--basic-white);
+	text-transform: uppercase;
+	font-weight: bold;
+	line-height: 21px;
 }
 
 .button-blue:hover {
@@ -130,19 +141,30 @@
 	background-color: var(--active-blue);
 }
 
-.button-brown {
+.button-brown-little {
+	font-weight: bold;
 	background-color: var(--basic-brown);
+	color: var(--basic-white);
+	text-transform: uppercase;
+	line-height: 21px;
 }
 
-.button-brown:hover {
+.button-brown-big {
+	font-size: 21px;
+	font-weight: bold;
+	background-color: var(--basic-brown);
+	color: var(--basic-white);
+	text-transform: uppercase;
+	line-height: 26px;
+}
+
+.button-brown:hover,
+.button-brown-little:hover {
 	background-color: var(--hover-brown);
 }
-.button-brown:active {
+.button-brown:active,
+.button-brown-little:active {
 	background-color: var(--active-brown);
-}
-
-.button-big {
-	background-size: 568px 86px;/* Тоже непонял почему не работает */
 }
 
 .button-transparent {
@@ -155,35 +177,47 @@
 .main-footer {
 	background-color: var(--transparent-white);/*Не уверен, нужно ли было выносить полупрозрачный в отдельный цвет  */
 	text-align: center;
+	line-height: 26px;
+	font-weight: bold;
+	font-size: 21px;
+	text-transform: uppercase;
+	color: var(--basic-black);
 }
 
-.social-button {
-	background-color: var(--basic-blue);
-}
-
-.social-button:hover {
+.twitter-button:hover,
+.facebook-button:hover,
+.youtube-button:hover {
 	background-color: var(--hover-blue);
 }
 
-.social-button:active {
+.twitter-button:active,
+.facebook-button:active,
+.youtube-button:active {
 	background-color: var(--active-blue);
 }
 
 .twitter-button {
+	background-color: var(--basic-blue);
 	background: url("../img/twitter.png") no-repeat;/* и здесь непонял почему не работает */
 }
 
 .facebook-button {
+	background-color: var(--basic-blue);
 	background: url("../img/facebook.png") no-repeat;
 }
 
 .youtube-button {
+	background-color: var(--basic-blue);
 	background: url("../img/youtube.png") no-repeat;
 }
 
 .list-unmarked {
 	list-style: none;
 	border: 0 none;
+}
+
+.list-unmarked li {
+	line-height: 21px;
 }
 
 .visually-hidden {
@@ -210,14 +244,24 @@
 .call-to-action,
 .feature {
 	text-align: center;
+	text-transform: uppercase;
+}
+
+.feature .img-bg-blue{
+	color: var(--basic-white)
 }
 
 .filter-title {
 	font-size: 16px;
+	font-weight: bold;
 }
 
 .offer-filter {
 	background: url("../img/filter-background.jpg") no-repeat;
+	background-color: var(--basic-blue);
+	color: var(--basic-white);
+	line-height: 21px;
+	text-transform: uppercase;
 }
 
 .search-results {
@@ -227,30 +271,34 @@
 	line-height: 18px;
 	text-transform: uppercase;
 }
-
-.button-filter-price {
-	color: var(--basic-blue);
-}
-
-.button-filter-type {
-	color: var(--basic-black);
-	opacity: 0.3;
-}
-
+.button-filter-price,
+.button-filter-type,
 .button-filter-rate {
 	color: var(--basic-black);
-	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	opacity: 0.3;
-	-webkit-text-stroke: 1px black;
+}
+
+.button-filter-price:hover,
+.button-filter-type:hover,
+.button-filter-rate:hover {
+	color: var(--basic-blue);
+	opacity: 1;
+}
+
+.button-filter-price:active,
+.button-filter-type:active,
+.button-filter-rate:active {
+	color: var(--basic-black);
 }
 
 .button-text-underline {
 	border-bottom: 1px dotted var(--basic-blue);
+	line-height: 18px;
 }
 
-.button-filter-rate:hover {
-	color: var(--basic-blue);
-	opacity: 1;
+.button-text-underline:active,
+.button-text-underline:focus {
+	border-bottom: 0px dotted var(--basic-blue);
 }
 
 .button-up:hover {
@@ -273,6 +321,8 @@
 	text-align: left;
 	border-top: 1px solid var(--focus-border-grey);
 	border-bottom: 1px solid var(--focus-border-grey);
+	line-height: 21px;
+	text-transform: uppercase;
 }
 
 .results-item .subtitle:hover {
@@ -294,4 +344,17 @@
 
 .rating-star {
 	background-image: url("../img/rating-star.svg");
+}
+
+.copyright {
+	font-size: 14px;
+	font-weight: normal;
+}
+
+.result-title {
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 26px;
+	text-transform: uppercase;
+	color: var(--basic-black);
 }

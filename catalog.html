@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="ru">
-  	<head>
-	    <meta charset="utf-8">
-	    <link rel="icon" href="favicon.ico">
-	    <link rel="icon" href="logo.svg" type="image/svg+xml">
-	    <link rel="apple-touch-icon" href="logo.png">
-	    <link rel="manifest" href="manifest.webmanifest">
-	    <link rel="stylesheet" href="css/normalize.css">
-	    <link rel="stylesheet" href="css/main.css">
-	    <title>Седона</title>
-  	</head>
-  	<body class="page-body">
-  		<header>
-	  		<nav>
-	        	<ul class="main-nav-list text-tall text-bold">
-		            <li><a class="link-unmarked text-black" href="#">Информация</a></li>
-		            <li><a class="link-unmarked text-black" href="#">Фото и Видео</a></li>
-		            <li class="logo"><a href="index.html"></a></li>
-		            <li><a class="link-unmarked text-black" href="#">Карта штата</a></li>
-		            <li><a class="link-unmarked text-black" href="">Гостиницы</a></li>
-	        	</ul>
-	      	</nav>
+<html lang="ru" class="page">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="logo.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Седона</title>
+  </head>
+  <body class="page-body">
+  	<header>
+  		<nav>
+  			<ul class="main-nav-list">
+	          <li><a class="link-unmarked text-black" href="#">Информация</a></li>
+	          <li><a class="link-unmarked text-black" href="#">Фото и Видео</a></li>
+	          <li class="logo"><a href="index.html"></a></li>
+	          <li><a class="link-unmarked text-black" href="#">Карта штата</a></li>
+	          <li><a class="link-unmarked text-black" href="catalog.html">Гостиницы</a></li>
+        	</ul>
+  		</nav>
   	</header>
   	<main>
       	<h1 class="visually-hidden">Каталог гостиниц</h1>
@@ -28,23 +28,23 @@
         <h2 class="visually-hidden">Фильтр предложений</h2>
 	        <form method="get" action="https://echo.htmlacademy.ru">
 	        	<fieldset class="list-unmarked">
-	        		<legend class="filter-title text-low text-bold text-uppercase text-white">Инфраструктура:</legend>
-	        		<ul class="text-uppercase text-white list-unmarked text-low">
+	        		<legend class="filter-title">Инфраструктура:</legend>
+	        		<ul class="list-unmarked">
 	        			<li><label><input type="text" name="pool">Бассейн</label></li> <!-- вопрос с визуальным отображением чекбоксов решается сейчас или на следующих этапах? -->
 	        			<li><label><input type="text" name="parking">Паркинг</label></li>
 	        			<li><label><input type="text" name="wifi">Wi-Fi</label></li>
 	        		</ul>
 	        	</fieldset>
 	        	<fieldset class="list-unmarked">
-	        		<legend class="filter-title text-low text-bold text-uppercase text-white">Тип Жилья:</legend>
-	        		<ul class="text-uppercase text-white list-unmarked text-low">
+	        		<legend class="filter-title">Тип Жилья:</legend>
+	        		<ul class="list-unmarked">
 	        			<li><label><input type="text" name="hotel">Гостиница</label></li>
 	        			<li><label><input type="text" name="motel">Мотель</label></li>
 	        			<li><label><input type="text" name="apartments">Апартаменты</label></li>
 	        		</ul>
 	        	</fieldset>
-        		<p class="filter-title text-low text-bold text-uppercase text-white">Стоимость в сутки (Р):</p>
-        		<ul class="text-uppercase text-white list-unmarked text-low">
+        		<p class="filter-title">Стоимость в сутки (Р):</p>
+        		<ul class="list-unmarked">
         	    	<li><input type="number" name="minprice" placeholder="ОТ 0" id="idminprice"></li>
         			<li><input type="number" name="maxprice" placeholder="ДО 3000" id="idmaxprice"></li>
         		</ul>
@@ -57,11 +57,11 @@
 	    <section class="search-results">
 	      	<h2 class="visually-hidden">Результаты поиска</h2>
 	      	<div>
-	      		<p class="subtitle text-tall text-black">Найдено:3</p>
+	      		<p class="subtitle-search">Найдено:3</p>
 	      		<div>
 	      			<p>Сортировка:</p>
 	      			<ul class="list-unmarked">
-			      		<li><a class="link-unmarked" href=""><span class="button-filter-price">По цене</span></a></li>
+			      		<li><a class="button-text-underline link-unmarked" href=""><span class="button-filter-price">По цене</span></a></li>
 			      		<li><a class="button-text-underline link-unmarked" href="#"><span class="button-filter-type">По типу</span></a></li>
 			      		<li><a class="button-text-underline link-unmarked" href="#"><span class="button-filter-rate">По рейтингу</span></a></li>
 	      			</ul>
@@ -71,13 +71,14 @@
 	        </div>
 	    </section>
 	    <section>
-	        <article class="results-item text-uppercase text-low">
+	        <article class="results-item">
 	      		<a class="link-unmarked" href="#">
-	            	<img src="img/amara_resort_spa.jpg" alt="Гостиница Amara Resort & Spa" width="135" height="90"><h3 class="subtitle text-tall text-black">Amara Resort & Spa</h3></a>
+	            	<img src="img/amara_resort_spa.jpg" alt="Гостиница Amara Resort & Spa" width="135" height="90">
+					<h3 class="result-title">Amara Resort & Spa</h3></a>
 	      		<p>Гостиница</p>
 	      		<p>От 4000 Р.</p>
-	      		<a class="button-blue text text-bold text-low text-white link-unmarked" href="#">Подробнее</a>
-	      		<a class="button-brown text text-bold text-low text-white link-unmarked" href="#">Забронировать</a>
+	      		<a class="button-blue link-unmarked" href="#">Подробнее</a>
+	      		<a class="button-brown-little link-unmarked" href="#">Забронировать</a>
 	      		<ul class="list-unmarked">
 		            <li><span class="rating-star"><!-- звезда из css --></span></li>
 		            <li><span class="rating-star"><!-- звезда из css --></span></li>
@@ -88,13 +89,14 @@
 	        </article>
 	    </section>
 	    <section>
-	        <article class="results-item text-uppercase text-low">
+	        <article class="results-item">
 	          	<a class="link-unmarked" href="#">
-	            	<img src="img/desert_quail_inn.jpg" alt="Гостиница Desert Quail Inn" width="135" height="90"><h3 class="subtitle text-tall text-black">Desert Quail Inn</h3></a>
+	            	<img src="img/desert_quail_inn.jpg" alt="Гостиница Desert Quail Inn" width="135" height="90">
+					<h3 class="result-title">Desert Quail Inn</h3></a>
 	      		<p>Мотель</p>
 	      		<p>От 3000 Р.</p>
-	      		<a class="button-blue text text-bold text-low text-white link-unmarked" href="#">Подробнее</a>
-	      		<a class="button-brown text text-bold text-low text-white link-unmarked" href="#">Забронировать</a>
+	      		<a class="button-blue link-unmarked" href="#">Подробнее</a>
+	      		<a class="button-brown-little link-unmarked" href="#">Забронировать</a>
 	      		<ul class="list-unmarked">
 		            <li><span class="rating-star"><!-- звезда из css --></span></li>
 		            <li><span class="rating-star"><!-- звезда из css --></span></li>
@@ -107,13 +109,14 @@
 	        </article>
 	    </section>
 	    <section>
-	      	<article class="results-item text-uppercase text-low">
+	      	<article class="results-item">
 	      	  	<a class="link-unmarked" href="#">
-	            	<img src="img/villas_at_poco_diablo.jpg" alt="Гостиница Villas at Poco Diablo" width="135" height="90"><h3 class="subtitle text-tall text-black">Villas at Poco Diablo</h3></a>
+	            	<img src="img/villas_at_poco_diablo.jpg" alt="Гостиница Villas at Poco Diablo" width="135" height="90">
+					<h3 class="result-title">Villas at Poco Diablo</h3></a>
 	      		<p>Апартаменты</p>
 	      		<p>От 2000 Р.</p>
-	      		<a class="button-blue text text-bold text-low text-white link-unmarked" href="#">Подробнее</a>
-	      		<a class="button-brown text text-bold text-low text-white link-unmarked" href="#">Забронировать</a>
+	      		<a class="button-blue link-unmarked" href="#">Подробнее</a>
+	      		<a class="button-brown-little link-unmarked" href="#">Забронировать</a>
 	      		<ul class="list-unmarked">
 	      			<li><span class="rating-star"><!-- звезда из css --></span></li>
 		      		<li><span class="rating-star"><!-- звезда из css --></span></li>
@@ -122,20 +125,20 @@
 	      	</article>
 	      </section>
   	</main>
-  	<footer class="main-footer text-tall text-black text-uppercase">
-      	<h2 class="visually-hidden">Контакты</h2>
-      	<p class="subtitle">#VISITSEDONA<br>ТЕЛ:<a class="link-unmarked text-black" href="tel:+79656660166">+7(965) 666-01-66</a></p>
-      	<h2 class="visually-hidden">Соц. сети</h2>
-      	<ul class="list-unmarked">
-	        <li><a class="social-button twitter-button" href="#"></a></li>
-	        <li><a class="social-button facebook-button" href="#"></a></li>
-	        <li><a class="social-button youtube-button" href="#"></a></li>
-      	</ul>
-      	<h2 class="visually-hidden">Copyright</h2>
-      	<p>WEBSITE BY</p>
-      	<a href="htmlacademy.ru">
-        	<img src="img/htmlacademy_logo.svg" alt="Логотип HTMLAcademy" width="115" height="41"> <!-- здесь не понял, как сделать состояния -->
-      	</a>
+  	<footer class="main-footer">
+        <h2 class="visually-hidden">Контакты</h2>
+        <p>#VISITSEDONA<br>ТЕЛ:<a class="link-unmarked" href="tel:+79656660166">+7(965) 666-01-66</a></p>
+        <h2 class="visually-hidden">Соц. сети</h2>
+        <ul class="list-unmarked">
+            <li><a class="twitter-button" href="#"></a></li>
+            <li><a class="facebook-button" href="#"></a></li>
+            <li><a class="youtube-button" href="#"></a></li>
+        </ul>
+        <h2 class="visually-hidden">Copyright</h2>
+        <p class="copyright">WEBSITE BY</p>
+        <a href="htmlacademy.ru">
+            <img src="img/htmlacademy_logo.svg" alt="Логотип HTMLAcademy" width="115" height="41"> <!-- здесь не понял, как сделать состояния -->
+        </a>
     </footer>
   </body>
 </html>
